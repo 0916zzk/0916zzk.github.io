@@ -1,0 +1,22 @@
+<div class="blog-comment-header  panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">请发表你的评论</h3>
+    </div>
+    <div class="panel-body">
+        <textarea class="blog-comment-input" placeholder="天青色等烟雨，评论区在等你..."></textarea>
+        <a href="javascript:;" class="blog-comment-submit">提交</a>
+    </div>
+</div>
+
+{{#each comments}}
+<div class="blog-comment-item">
+    <div class="blog-comment-user">
+        <div class="blog-comment-avarar">
+            <img src="{{uid.avatar}}" alt="">
+        </div>
+        <span class="blog-comment-nickname">{{uid.nickname}}</span>
+    </div>
+    <p class="blog-comment-info">{{content}}</p>
+    <p class="blog-comment-time">{{date}}</p>
+</div>
+{{/each}}

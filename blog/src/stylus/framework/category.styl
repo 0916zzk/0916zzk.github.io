@@ -1,0 +1,41 @@
+.blog-category
+    padding: 2*white-space
+.blog-category-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: white-space
+    background-color bg-theme-color
+    color font-focus-color
+    box-shadow 0 0 4px 2px rgba(122,122,122,.3) inset
+    &:hover
+        transform scale(1.02)
+    p
+        margin-top: white-space
+    &:nth-of-type(2n)
+      color font-focus-color
+      background-color bg-motify-color
+    .blog-category-name
+        font-size: font-head-size
+    .blog-category-count
+        font-size: font-small-size
+.blog-category-add
+    position: relative
+    &::after,
+    &::before
+      position absolute
+      content:''
+      background-color bg-motify-color
+      width 50%
+      height 8px
+      border-radius 2px
+    &::before
+      width 8px
+      height 50%
+
+for num in (1..10)
+  .item-row-{num}
+    width num * 10vw * (3/4)
+  .item-column-{num}
+    height num * 10vw * (3/4)

@@ -1,0 +1,112 @@
+.game-container {
+    box-sizing: content-box;
+    display: flex;
+    width: 655px;
+    height: 640px;
+    box-shadow: 0 0 0 4px #ccc;
+    margin: auto;
+}
+
+.game_area {
+    box-sizing: content-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 440px;
+    height: 100%;
+    border-right: 2px solid #ccc;
+}
+
+.ball_area {
+
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.battery_area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    border-top: 2px solid #ccc;
+}
+
+.battery {
+    position: absolute;
+    width: 60px;
+    height: 86px;
+    background: url(../image/arrow.png) no-repeat top/cover;
+    transform-origin: 30px 56px;
+}
+
+.score_area {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.score_area .start {
+    width: 120px;
+    height: 45px;
+    line-height: 42px;
+    text-align: center;
+    color: white;
+    background-color: #6698cb;
+    border: 1px solid rgba(0, 0, 0, .21);
+    border-bottom: 4px solid rgba(0, 0, 0, .21);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+}
+
+.score_area p {
+    padding: 60px 0 8px;
+    color: #608FBF;
+}
+
+.score_area .score {
+    font-size: 32px;
+    color: #72B08E;
+}
+
+.ball {
+    display: none;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f0d264;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    box-shadow: -2px -2px 12px rgba(100, 100, 100, .7) inset;
+}
+
+.ball.active {
+    color: orange;
+    font-weight: 900;
+    background-color: #222 !important;
+}
+
+.ball.lose {
+    color: #222;
+    font-weight: 900;
+    background-color: rgb(34, 34, 34) !important;
+}
+
+.bullet {
+
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f0d264;
+    box-shadow: -2px -2px 12px rgba(100, 100, 100, .7) inset;
+}

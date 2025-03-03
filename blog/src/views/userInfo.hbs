@@ -1,0 +1,23 @@
+<div class="blog-modal-wrap">
+    <form id="{{formType}}" action="javascript:;">
+        <div class="blog-modal-body">
+            {{#each formData}}
+            <div class="form-group row">
+                <label class="col-sm-2">{{label}}</label>
+                <div class="col-sm-10" data-display="error">
+                    <input type="{{type}}" name="{{query}}" data-input-query="{{query}}" placeholder="{{placeholder}}"
+                        {{#if value}}value="{{value}}" {{/if}} {{#if readonly}}readonly{{/if}}>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+
+        <div class="blog-modal-footer">
+            {{#each btns}}
+            <button type="{{#if isSubmit}}submit{{else}}button{{/if}}" class="btn btn-default"
+                data-modal-btn="{{targetName}}">{{name}}</button>
+            {{/each}}
+        </div>
+    </form>
+</div>

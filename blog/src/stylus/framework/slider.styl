@@ -1,0 +1,59 @@
+
+.blog-user-box
+    overflow hidden
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-right: 10px
+    padding 20px
+    background-color: bg-theme-color
+    box-shadow: 0 0 4px bg-theme-color
+    border-radius: border-normal-radius
+    
+.blog-user-avatar
+    width 150px
+    height 150px
+    border-radius: 50%
+    box-shadow: 0 0 20px bg-motify-color
+    overflow: hidden
+    cursor pointer
+    &:hover
+        transform: scale(1.01)
+
+.blog-user-title
+    font-size: font-head-size
+    margin: 2*white-space 0
+    
+.blog-user-status
+    display flex
+    justify-content: center
+    text-align: center
+    .blog-status-article
+        padding-right: white-space * 2
+        position: relative
+        .blog-article-num
+            font-weight: bold
+        &:after
+            content: ""
+            position absolute
+            right 0
+            top: 0
+            width 1px
+            height 80%
+            background-color: bg-motify-color
+            
+        
+        
+    .blog-status-classify
+        padding-left: 20px
+        .blog-classify-num
+            font-weight: bold
+            
+    
+    .blog-user-desc
+        padding: 5px
+        text-align: start
+        text-indent: .5em
+        color: font-normal-color
+        

@@ -1,0 +1,37 @@
+{{#if isLogin}}
+<div class="blog-user-box">
+    <div class="blog-user-avatar" data-router="postAvatar">
+        <img src="{{avatar}}" alt="">
+    </div>
+    <h4 class="blog-user-title">{{nickname}}</h4>
+    <div class="blog-user-status">
+        <div class="blog-status-article">
+            <p class="blog-article-num">{{articleNum}}</p>
+            <p>文章</p>
+        </div>
+        <div class="blog-status-classify">
+            <p class="blog-classify-num">{{categoryNum}}</p>
+            <p>专栏</p>
+        </div>
+    </div>
+    <p class="blog-user-desc">{{#if desc}}{{desc}}{{else}}这个人很懒，什么也没留下 .....{{/if}}</p>
+</div>
+{{else}}
+<div class="blog-user-box">
+    <div class="blog-user-avatar">
+        <img src="./image/avatar_default.png" alt="">
+    </div>
+    <h4 class="blog-user-title">请先登录...</h4>
+    <div class="blog-user-status">
+        <div class="blog-status-article">
+            <p class="blog-article-num">0</p>
+            <p>文章</p>
+        </div>
+        <div class="blog-status-classify">
+            <p class="blog-classify-num">0</p>
+            <p>专栏</p>
+        </div>
+    </div>
+    <p class="blog-user-desc">这个人很懒，什么也没留下 .....</p>
+</div>
+{{/if}}

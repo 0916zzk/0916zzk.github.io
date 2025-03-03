@@ -1,0 +1,34 @@
+{{#if count}}
+{{#each list}}
+<section class="blog-content-article" data-router="article" data-article-id="{{_id}}">
+    <h2 class=" blog-article-title">{{title}}</h2>
+    <p class="blog-article-time">
+        <i class="glyphicon glyphicon-time"></i>
+        {{date}}
+    </p>
+    <div class="blog-article-pic">
+        <img src="{{cover}}" alt="">
+    </div>
+    <p class="blog-article-desc">
+        {{body}}
+    </p>
+    <div class="blog-article-bottom">
+        <div class="blog-article-author">
+            <i class="glyphicon glyphicon-pencil"></i>
+            {{author.nickname}}
+        </div>
+        <div class="blog-article-util">
+            <span class="blog-tools-like">点赞（{{like_num}}）</span>
+            <span class="blog-tools-conment">评论（{{comment_num}}）</span>
+        </div>
+    </div>
+</section>
+{{/each}}
+{{else}}
+<div class="blog-article-empty">
+    <p class="blog-empty-dec">暂无文章</p>
+    <a href="javascript:;">
+        <div class="blog-empty-btn" data-category-id="{{categoryId}}" data-router="write">去写一篇文章&gt;&gt;&gt;</div>
+    </a>
+</div>
+{{/if}}

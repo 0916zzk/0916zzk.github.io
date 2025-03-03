@@ -1,0 +1,13 @@
+{{#if isLogin}}
+<div class="blog-header-avatar">
+    <img src="{{avatar}}" alt="">
+    <div class="blog-header-userbox">
+        <ul class="blog-header-user">
+            <li data-router="write">创作中心</li>
+            <li data-router="logout">退出登录</li>
+        </ul>
+    </div>
+</div>
+{{else}}
+<a href="#" class="btn btn-primary btn-lg" data-modal="login">登录</a> <a href="#" data-modal="register">注册</a>
+{{/if}}

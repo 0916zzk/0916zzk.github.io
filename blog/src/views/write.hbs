@@ -1,0 +1,32 @@
+<div class="blog-write">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">标题</h3>
+        </div>
+        <div class="panel-body">
+            <input id="blog-write-title" class="blog-write--input" placeholder="请输入文章标题..." type="text">
+        </div>
+    </div>
+    <div id="blog-editor—wrapper">
+        <div id="blog-toolbar-container"><!-- 工具栏 --></div>
+        <div id="blog-editor-container"><!-- 编辑器 --></div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">分类</h3>
+        </div>
+        <div id="blog-editor—category">
+            {{#each categoties}}
+            <input type="radio" name="category" id="{{_id}}" style="display: none;" {{#if selected}}checked{{/if}}
+                value="{{_id}}">
+            <label for="{{_id}}">{{name}}</label>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<div class="blog-write-btn">
+    <a href="javascript:;" class="blog-write-save">保存</a>
+    <a href="javascript:;" class="blog-write-submit">提交</a>
+</div>
+</div>

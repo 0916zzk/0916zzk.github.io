@@ -1,0 +1,154 @@
+
+.blog-header
+    position sticky
+    top: 0
+    z-index: 99
+    .row
+        display: flex
+        align-items: center
+        justify-content:space-between
+        height 80px
+        background-color: bg-theme-color
+    
+     
+.blog-logo 
+    width 50px
+    img
+        width 100%
+        height: auto   
+    
+
+.blog-header-title
+    font-size: 25px
+    color: white
+    font-weight: bolder
+    
+.blog-nav-list
+    display: flex
+    justify-content: space-around
+    font-size: font-base-size * 1.2
+    a
+        cursor pointer
+        color: font-normal-color
+        &:hover
+            color:  font-focus-color
+        &.active
+            color: white
+            border-bottom: 2px solid font-normal-color
+            font-weight: bolder
+        li
+            padding: 5px 10px
+            
+    
+    
+.blog-search
+    overflow: hidden
+    display: flex
+    align-items: center
+    background-color: bg-theme-color
+    border: 1px solid font-normal-color
+    margin: 0
+    padding: 5px
+    border-radius: 8px
+    .blog-search-input
+        flex: 1
+        width 120px
+        border: none
+        outline: none
+        background-color: bg-theme-color
+        .blog-search-btn
+            font-size: 20px
+            text-align: center
+            cursor pointer
+        
+    
+.blog-login
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.blog-menu 
+    padding: 10px
+    font-size: 30px
+    cursor pointer
+        
+.blog-header-avatar
+    height 50px
+    width 50px
+    img
+        border-radius: 50%
+        transition: all .5s
+    
+    &:hover 
+        img
+            transform: rotate(45deg)
+        .blog-header-userbox
+            max-height: 1000px
+        
+    
+    
+
+.blog-header-userbox
+    z-index 99999
+    overflow: hidden
+    max-height: 0px
+    width: 100px
+    margin-top: white-space
+    transform: translateX(border-normal-radius)
+    transition: all 1.5s
+    
+.blog-header-user
+    width 100px
+    margin-top: white-space
+    border-radius: border-normal-radius
+    background-color: bg-motify-color
+    li
+        padding: white-space
+        color: white
+        cursor: pointer
+        &:hover
+            background-color: white
+            color: bg-motify-color
+            font-weight: bold
+            
+        &:not(:last-child)
+            position relative
+            &::after
+                content:""
+                display: block
+                position absolute
+                bottom 0
+                left: 0
+                width 100%
+                height: 1px
+                background-color: black
+                transform: scaleY(.5)
+    position relative
+    &:before
+        content: ""
+        display: block
+        position absolute
+        left: border-normal-radius
+        top -10px
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent bg-motify-color transparent;                                    
+.blog-nav-pulldown
+    max-height: 0px
+    overflow: hidden
+    z-index 999
+    position absolute
+    top: 0
+    display: flex
+    flex-direction: column
+    width 100vw
+    border-top:  1px solid bg-motify-color
+    transform: translateY(80px) 
+    background-color: bg-theme-color
+    li
+        text-align: center
+        padding: white-space
+        border-bottom: 1px solid bg-motify-color
+        
+
+    

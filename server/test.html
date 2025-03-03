@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="register">注册</button>
+    <button id="login">登录</button>
+    <button id="enter">访问页面</button>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="./node_modules/jsencrypt/bin/jsencrypt.min.js"></script>
+    <script>
+
+
+        document.querySelector("#register").addEventListener("click", register)
+        document.querySelector("#login").addEventListener("click", login)
+        document.querySelector("#enter").addEventListener("click", enter)
+
+        async function enter() {
+            let token = localStorage.getItem("Authorization")
+            let result = await axios.get("http://127.0.0.1:3001/", {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+            console.log(result.data);
+
+        }
+        async function login() {
+            try {
+                let key = await getPublicKey()
+                let encrypt = new JSEncrypt()
+                encrypt.setPublicKey(key)
+                //加密密码
+                let pwd = encrypt.encrypt("123456");
+                let result = await axios.post("http://127.0.0.1:3001/login", {
+                    uname: "zzz",
+                    pwd: pwd
+                })
+                if (result.data.tag !== "USER_LOGIN") {
+                    console.log("登陆失败");
+                    return
+                }
+                let token = result.data.data.token;
+                localStorage.setItem("Authorization", token)
+                console.log("登陆成功");
+
+            } catch (e) {
+                console.error(e)
+            }
+        }
+        async function register() {
+            let key = await getPublicKey()
+            let encrypt = new JSEncrypt()
+            encrypt.setPublicKey(key)
+            //加密密码
+            let pwd = encrypt.encrypt("123456");
+            let result = await axios.post("http://127.0.0.1:3001/register", {
+                uname: "zzz",
+                pwd: pwd
+            })
+            console.log(result.data);
+
+        }
+
+        async function getPublicKey() {
+            let key = localStorage.getItem("key")
+            if (!key || key === "undefined") {
+                let result = await axios.get("http://127.0.0.1:3001/publickey")
+                key = result.data.data.key
+                localStorage.setItem("key", key)
+            }
+            return key
+        }
+
+
+    </script>
+</body>
+
+</html>

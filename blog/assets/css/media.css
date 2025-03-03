@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('fonts/iconfont.eot?t=1600426546624');
+    /* IE9 */
+    src: url('fonts/iconfont.eot?t=1600426546624#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAS4AAsAAAAACZwAAARrAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDSAqGEIUYATYCJAMYCw4ABCAFhG0HWBtOCFGULspqsq+wKWO+GKJwXogXwkCjQQ+Evn05o/Tmdn/CWtgG7CKF5wDBE+3X3uzO7ldJh0qDrg1PXronIomYrETRBCXeT3b2b3lEpbkvLFIehM2H9pLZzSaenZwqqfxQaVQqGrOyuvDwtnv/7k9So5BJKoGZTRUuRKGkK0x2QTiRPI44CCLOEosr0+0G0l/4RJO7B8EAIYJA47YGzrlqkEjLIJhA8XigAzpJpmAVUP1xr+qf5x8s61myQaI496BcKFwuUIHGXmQtSLmCWgewTbzfuh4CYqPWYKb61l6Ip/TdBMhpmTrEJ+y0ghKhyRccm8gHgrDcszcAePB+Xn5wJB4MV9FvdLjVuaGyp3ePG401m+oojA7nBdiTwIJlgELeQv8FLsgv48TyX+BtA1IhQ/tqFrOS69292J+EWg+L1PiXB46lDIEMQJ9S5K7OHaDCkkeGYlixMFTCisJwDGwY/N9TXpbZD9gzAPwBiGwk6QcOfgcvpWOqmuni+nDbJCffPri99vX5c4JDgObuNOtT9Qobn1udt1pvXyqbSOFmnLnrUp1xT05in3ORNC6+nT8KbDu2cILh7o5rl+7K1J35e9b7WiHOI4LWDRwQhtIW7srqIIzWBM4jQrddyno3JkG8WNmroq/UENHQrkXGZmh3yKq0M7oO1tmbuCt311QH7T+SszNH3zmavW3H1gfaO3fpCqqAIVBbk3Rl6+lFYfQpjxD/1LCiaKujjpQD+89yHz9y0JxlpFBTnnAd1a2FWEvuByU7/O7KqNeXCjfdL1cSSuJRmNo0Bpn8r4CxZCUHHcjbCN6cUle4Ls4hLHIutpit6Y6v6lp58hMru1btw3RqwOWJcnTx2zmdm0nVEhLUh2y1sY2ZRsiMJ91hePo8SkrtC2z+X28ZH25J8x/lc11WCMukL2WvGeIKj5MKnvzeVZWYhp/oVg54db9lpL7krXtXOz+MYaIn3rxmf0cKGU2aLN3uOQqu3RZ9sPmavnmV/5xqhowU6qgjOVx+IowrAqhXhNR4GWQA/BR+4datAgD7sL8Y/reDi/+X/Q6P6ylpaaV/QlEAPuYvOLy+4WiCbQB/FQONFf8pRcM5VVS6w6c02xpCgLf/sbIGxMYS/JPCtVdDBTsQeUXIKQBGYASs0DSq5DI4iVXwQmsQW9JwcqJBcCQjYNEUAaJ0BozcM1ilm6iSL8HpfQGvDAexo8g6Z2I2VmINwTrFbtQ/jCxXKGiYLprot3ZjM+rXSVzl0TRMbCuFVElJlxpwEJMhDrAHTAelBjJIKIDqiZthvz+EwiTkxS4qeSgNF8uyUfRFkisUgERbCExHYW5Iv2GIxSUkyHBWphIz398NM0X56UjFTFlUgxE2a+2ISqI0QBv0wUYzl/IS2wCTA0UZEAMREoDUE17Mb+RDkHDxVl6YCyXxdMiGFZPJRUZTvTS9MXCXVwEx/aN8GLGi4sRLgLv1qI3jhqJBT1QPxg9bQb+lB834SGLzsBU0xU6/PowJAAA=') format('woff2'),
+        url('fonts/iconfont.woff?t=1600426546624') format('woff'),
+        url('fonts/iconfont.ttf?t=1600426546624') format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+        url('fonts/iconfont.svg?t=1600426546624#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 32px;
+    color: #ccc;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+}
+
+.icon-pause:before {
+    content: "\e7d2";
+}
+
+.icon-loop:before {
+    content: "\e6a9";
+}
+
+.icon-volume:before {
+    content: "\e63a";
+}
+
+.icon-fullscreen:before {
+    content: "\e640";
+}
+
+.icon-player:before {
+    content: "\e62b";
+}
+
+.media-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 500px;
+    margin: auto;
+    border: 1px solid #ccc;
+}
+
+.media-player {
+    background-color: #333;
+}
+
+.media-player .hint {
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    color: #ccc;
+    font-weight: 900;
+}
+
+.media-player video {
+    width: 100%;
+}
+
+.media-controls {
+    box-sizing: content-box;
+    position: absolute;
+    bottom: -53px;
+    height: 54px;
+    width: 100%;
+}
+
+.media-controls .media-progress {
+    margin-bottom: 0;
+    position: relative;
+    height: 4px;
+    background-color: #ccc;
+    color: aliceblue;
+}
+
+.media-progress {
+    cursor: pointer;
+}
+
+.media-progress:hover .line .unit {
+    display: block;
+}
+
+.media-progress .media-time {
+    z-index: 999;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    color: white;
+}
+
+
+
+.media-progress .line {
+    position: relative;
+    height: 4px;
+    width: 0;
+    background-color: aqua;
+}
+
+.media-progress .line .unit {
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: aqua;
+
+}
+
+.media-controls .media-operation {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.media-operation i {
+    margin: 0 10px;
+}
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 0 20px;
+}
+
+[type="range"] {
+    width: 80px;
+    height: 5px;
+}
+
+.highlight {
+    font-weight: bolder;
+    color: white;
+    text-shadow: #FC0 1px 0 10px;
+}

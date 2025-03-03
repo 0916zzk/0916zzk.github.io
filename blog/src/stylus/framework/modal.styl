@@ -1,0 +1,67 @@
+.blog-modal
+    position fixed
+    width 100%
+    height: 100%
+    background-color: rgba(black,.5)
+    z-index 100
+    
+.blog-modal-wrap
+    width max(50%,700px)
+    padding:  0 white-space white-space
+    margin: 100px auto
+    border-radius: border-normal-radius
+    background-color: white
+    
+.blog-modal-header
+    padding white-space
+    font-size: font-head-size
+    text-align: start
+    button span
+        font-size: 30px
+        padding 5px
+    &::after
+        content: ""
+        display block
+        height 1px
+        width 100%
+        margin-bottom: white-space
+        background-color: bg-motify-color
+        transform: scaleY(.2)
+        
+    
+.blog-modal-body
+    padding: white-space 2*white-space
+    margin-bottom: white-space
+    .form-group
+        display: flex
+        align-items: center
+        text-align: end 
+    input
+        width 100%
+        padding: white-space 2*white-space
+        border: 1px solid bg-motify-color
+        outline: none
+        &:focus
+            box-shadow: 0 0 1px blue
+ .blog-modal-body input[readonly]
+    outline: 0
+    border: 0
+    color: black
+    &:focus
+        box-shadow: 0 0 0 0 blue           
+    
+   
+    
+.blog-modal-footer
+    display: flex
+    justify-content: flex-end
+    button
+        padding:  white-space 3*white-space
+        margin:0 white-space
+    
+    
+[type=submit]
+    background-color: btn-coloe
+    color: white
+    font-weight: bold 
+    

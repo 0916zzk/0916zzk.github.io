@@ -1,0 +1,20 @@
+<div class="blog-article-head">
+    <i class="glyphicon glyphicon-chevron-left" data-router="index"></i>
+    <h2 class=>{{title}}</h2>
+</div>
+<div class="blog-article typo">
+
+    <div class="blog-article--info">
+        <span class="blog-info-item">
+            <i class="glyphicon glyphicon-pencil"></i>
+            {{author.nickname}}
+        </span>
+        <span class="blog-info-item">
+            <i class="glyphicon glyphicon-time"></i> {{date}}
+        </span>
+    </div>
+    <div class="blog-article-wrap">
+        {{{body}}}
+    </div>
+</div>
+{{>comments}}

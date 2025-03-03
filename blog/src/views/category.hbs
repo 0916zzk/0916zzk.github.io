@@ -1,0 +1,12 @@
+<div class="blog-category">
+    <a href="javascript:;" class="blog-category-item blog-category-add item-row-3 item-column-3"
+        data-modal="postCategory">
+    </a>
+    {{#each list}}
+    <a href="javascript:;" class="blog-category-item item-row-{{row}} item-column-{{col}}" data-category-id="{{_id}}"
+        data-router="index">
+        <p class="blog-category-name">{{name}}</p>
+        <p class="blog-category-count">文章数量：{{aids.length}}</p>
+    </a>
+    {{/each}}
+</div>

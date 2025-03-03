@@ -1,0 +1,49 @@
+{
+  "name": "vue-blog",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "animate.css": "^4.1.1",
+    "echarts": "^5.5.1",
+    "echarts-wordcloud": "^2.1.0",
+    "element-plus": "^2.8.5",
+    "github-markdown-css": "^5.7.0",
+    "jsencrypt": "^3.3.2",
+    "mitt": "^3.0.1",
+    "pinia": "^2.2.4",
+    "qs": "^6.13.0",
+    "socket.io-client": "^4.8.0",
+    "store": "^2.0.12",
+    "vant": "^4.9.8",
+    "vue": "^3.5.11",
+    "vue-router": "^4.4.5",
+    "vuewordcloud": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@vant/auto-import-resolver": "^1.2.1",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "eslint": "^9.12.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "less": "^4.2.0",
+    "postcss": "^8.4.47",
+    "postcss-import": "^16.1.0",
+    "rollup-plugin-external-globals": "^0.12.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.79.5",
+    "stylus": "^0.63.0",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-components": "^0.27.4",
+    "vite": "^5.4.8",
+    "vite-plugin-html": "^3.2.2"
+  }
+}
